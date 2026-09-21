@@ -1,0 +1,37 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "bend",
+      "camelcase": "Bend",
+      "scope": "source.bend",
+      "path": ".",
+      "file-types": ["bend"],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^bend$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Bend grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Christian Bager Bach Houmann",
+        "email": "christian@bagerbach.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/chhoumann/zed-bend"
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": false,
+    "swift": false,
+    "zig": false
+  }
+}

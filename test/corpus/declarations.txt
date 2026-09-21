@@ -1,0 +1,123 @@
+=======
+import Base
+=======
+import Base
+---
+
+(source_file
+  (import_statement))
+
+=======
+hello world
+=======
+import Base
+
+def main() -> IO(Unit):
+  do IO<Unit>:
+    IO.print("Hello, world!")
+---
+
+(source_file
+  (import_statement)
+  (function_definition
+    (identifier)
+    (call
+      (identifier)
+      (identifier))
+    (block
+      (do_block
+        (identifier)
+        (identifier)
+        (block
+          (call
+            (identifier)
+            (string)))))))
+
+=======
+type and match
+=======
+type Shape is Data:
+  Circle{r: U32}
+  Square{s: U32}
+
+def area(x: Shape) -> U32:
+  match x:
+    case Circle{+r}:
+      (3 * r * r : U32)
+    case Square{+s}:
+      (s * s : U32)
+---
+
+(source_file
+  (type_definition
+    (identifier)
+    (builtin_type)
+    (constructor_declaration
+      (identifier)
+      (parameter_list
+        (parameter
+          (identifier)
+          (identifier))))
+    (constructor_declaration
+      (identifier)
+      (parameter_list
+        (parameter
+          (identifier)
+          (identifier)))))
+  (function_definition
+    (identifier)
+    (parameter_list
+      (parameter
+        (identifier)
+        (identifier)))
+    (identifier)
+    (block
+      (match
+        (identifier)
+        (case
+          (constructor
+            (identifier)
+            (unary_expression
+              (identifier)))
+          (block
+            (parenthesized
+              (binary_expression
+                (binary_expression
+                  (integer)
+                  (identifier))
+                (identifier))
+              (identifier))))
+        (case
+          (constructor
+            (identifier)
+            (unary_expression
+              (identifier)))
+          (block
+            (parenthesized
+              (binary_expression
+                (identifier)
+                (identifier))
+              (identifier))))))))
+
+=======
+law
+=======
+law add_zero:
+  for x: Nat
+  {Nat.add(x, 0n) == x : Nat}
+---
+
+(source_file
+  (law_definition
+    (identifier)
+    (clause
+      (identifier)
+      (identifier))
+    (block
+      (equality
+        (call
+          (identifier)
+          (identifier)
+          (nat))
+        (identifier)
+        (identifier)))))
