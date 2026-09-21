@@ -1,7 +1,7 @@
 {
   "name": "zed-bend",
-  "version": "0.1.0",
-  "description": "Bend language support for Zed",
+  "version": "0.2.0",
+  "description": "Bend 2 syntax highlighting and language server for Zed",
   "license": "MIT",
   "author": "Christian Bager Bach Houmann <christian@bagerbach.com>",
   "repository": {

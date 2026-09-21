@@ -1,10 +1,14 @@
 id = "bend"
 name = "Bend"
-description = "Bend 2 syntax highlighting."
-version = "0.1.0"
+description = "Bend 2 syntax highlighting and language server."
+version = "0.2.0"
 schema_version = 1
 authors = ["Christian Bager Bach Houmann <christian@bagerbach.com>"]
 repository = "https://github.com/chhoumann/zed-bend"
+
+[language_servers.bolt]
+name = "bolt"
+languages = ["Bend"]
 
 [grammars.bend]
 repository = "https://github.com/chhoumann/zed-bend"
