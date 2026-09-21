@@ -8,4 +8,4 @@ repository = "https://github.com/chhoumann/zed-bend"
 
 [grammars.bend]
 repository = "https://github.com/chhoumann/zed-bend"
-rev = "0000000000000000000000000000000000000000"
+rev = "4893f6e52ba9b06a486a93781805beccf5a24d0d"
